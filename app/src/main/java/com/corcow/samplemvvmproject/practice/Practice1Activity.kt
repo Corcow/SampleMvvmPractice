@@ -1,4 +1,4 @@
-package com.corcow.samplemvvmproject.view.practice
+package com.corcow.samplemvvmproject.practice
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -11,6 +11,13 @@ class Practice1Activity : AppCompatActivity() {
     /** Practice 1. Just use DataBinding. **/
     // Practice 2. Use ViewModel.
     // Practice 3. Use LiveData.
+    /**
+     * findViewById() 사용이 사라졌다.
+     *
+     * 한계?
+     * Orientation 변경 시 onCreate() 호출되면 Activity 라이프사이클이 변경됨과 동시에 뷰에 노출되는 데이터가 변경된다.
+     * 뷰에 표현될 데이터가 컴포넌트 라이프사이클의 영향을 받는다.
+     */
 
     // DataBinding
     val mBinding: ActivityPractice1Binding by lazy {
@@ -24,24 +31,14 @@ class Practice1Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         mBinding.textOutput.text = "$counter"
-
         mBinding.fabDecrease.setOnClickListener {
             counter--
             mBinding.textOutput.text = "$counter"
         }
-
         mBinding.fabIncrease.setOnClickListener {
             counter++
             mBinding.textOutput.text = "$counter"
         }
     }
 
-    /**
-     * findViewById() 사용이 사라졌다.
-     *
-     * 한계?
-     * Orientation 변경 시 onCreate() 호출되면
-     * Activity 라이프사이클이 변경됨과 동시에 데이터가 초기화된다.
-     * 뷰에 표현될 데이터가 컴포넌트 라이프사이클에 의존적이다.
-     */
 }

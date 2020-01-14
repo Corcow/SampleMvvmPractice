@@ -9,10 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.practice.Practice3Activity"></activity>
-        <activity android:name=".view.practice.Practice2Activity" />
-        <activity android:name=".view.practice.Practice1Activity" />
-        <activity android:name=".view.main.MainActivity">
+        <activity android:name=".vmshare.VmShareActivity"></activity>
+        <activity android:name=".practice.Practice3Activity" />
+        <activity android:name=".practice.Practice2Activity" />
+        <activity android:name=".practice.Practice1Activity" />
+        <activity android:name=".main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

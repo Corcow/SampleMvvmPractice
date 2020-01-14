@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
 
     /**
      * Android architecture component 스터디
-     * 
+     *
      */
 
     val mBinding: ActivityMainBinding by lazy {
